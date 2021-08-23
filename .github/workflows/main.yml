@@ -1,0 +1,14 @@
+name: A workflow for my Hello World file
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks out the code from repository
+      - uses: actions/checkout@v1
+      # Get the action file from the same repository
+      - uses: ./action-a
+      # Input for the action
+        with:
+          MY_NAME: "Sarath"
